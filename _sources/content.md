@@ -1,4 +1,4 @@
-# CONTENT
+# 目录
 
 **Welcome to Lab of Computational Neuroscience**
 
