@@ -1,0 +1,2037 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>HPC Short Manual for Researcher &#8212; LCNS Handbook</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="SJTU PI2.0-超算简明教程" href="simple-hpc-guide/hpc101.html" />
+    <link rel="prev" title="冬季班工作人员职责" href="winter_school.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">LCNS Handbook</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="content.html">
+                    目录
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lab routines
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="%E4%BC%9A%E8%AE%AE%E6%8A%A5%E9%94%80%E6%B5%81%E7%A8%8B.html">
+   会议报销流程
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="%E6%97%A5%E5%B8%B8%E8%80%97%E6%9D%90%E6%8A%A5%E9%94%80%E6%B5%81%E7%A8%8B.html">
+   办公用品耗材报销流程
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lab activities
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="winter_school.html">
+   冬季班工作人员职责
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lab resources
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   HPC Short Manual for Researcher
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simple-hpc-guide/hpc101.html">
+   SJTU PI2.0-超算简明教程
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="v2ray/v2ray-client-101.html">
+   V2ray Client Setups
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/LCNS-SJTU/handbook/main?urlpath=tree/docs/Linux_guide.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/LCNS-SJTU/handbook"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/LCNS-SJTU/handbook/issues/new?title=Issue%20on%20page%20%2FLinux_guide.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Linux_guide.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="_sources/Linux_guide.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#backgrounds-and-concepts">
+   Backgrounds and Concepts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unix">
+     Unix
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux">
+     Linux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gnu-and-free-software">
+     GNU and Free Software (自由软件)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux-distributions">
+     Linux Distributions (发行版)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#software-repository">
+     Software Repository (软件仓库/软件源)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-choose-linux">
+     Why Choose Linux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-to-start-and-how-to-learn-linux">
+     Where to Start and How to Learn Linux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-to-get-help">
+     Where to Get Help
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-system-organization">
+     File System Organization
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-day-in-linux">
+   One Day in Linux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#login">
+     Login
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operation-of-file-content">
+     Operation of File Content
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compile-and-execute-files">
+     Compile and execute files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operation-of-files-part-1">
+     Operation of Files (Part 1)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operation-of-files-part-2">
+     Operation of Files (Part 2)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inspecting-system">
+     Inspecting system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#internet">
+     Internet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tmux">
+     TMUX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#history-operations">
+     History operations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programming-tips">
+   Programming tips
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gcc-and-linking-principle">
+     GCC and Linking Principle
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sanitizer">
+       Sanitizer
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#compile-and-install-external-softwares">
+       Compile and Install External Softwares
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#profiling">
+     Profiling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#path-and-other-environmental-variables">
+     PATH, and Other Environmental Variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-tutorial-on-hpc-server">
+   Python Tutorial on HPC-Server
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-python">
+     Running Python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#execute-python-script">
+     Execute Python Script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coding-python-in-ipython">
+     Coding Python in IPython
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-an-isolated-python-environment">
+     Create an isolated Python environment
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-a-new-virtual-environment">
+       Create a new virtual environment
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#activate-script">
+       Activate script
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#removing-an-environment">
+       Removing an Environment
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manage-your-own-python-environment-with-pypi">
+     Manage your own Python environment with PyPI
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-started-with-anaconda">
+   Get Started with Anaconda
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequisites-already-satisfied">
+     Prerequisites (already satisfied)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installation">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-more-thing-create-your-own-python-environment">
+     One more thing: Create your own Python environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#activate-and-deactivate">
+     Activate and Deactivate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uninstalling-anaconda">
+     Uninstalling Anaconda:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#removing-anaconda-path-from-bashrc">
+       Removing Anaconda path from
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .bashrc
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conda-commands-for-package-management">
+     Conda commands for package management
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conda-commands-for-environment-management">
+     Conda commands for environment management
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-jupyter-notebook">
+   Access Jupyter Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recommended-softwares">
+   Recommended Softwares
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meld">
+     Meld
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lyx">
+     LyX
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>HPC Short Manual for Researcher</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#backgrounds-and-concepts">
+   Backgrounds and Concepts
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unix">
+     Unix
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux">
+     Linux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gnu-and-free-software">
+     GNU and Free Software (自由软件)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux-distributions">
+     Linux Distributions (发行版)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#software-repository">
+     Software Repository (软件仓库/软件源)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-choose-linux">
+     Why Choose Linux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-to-start-and-how-to-learn-linux">
+     Where to Start and How to Learn Linux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-to-get-help">
+     Where to Get Help
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-system-organization">
+     File System Organization
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-day-in-linux">
+   One Day in Linux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#login">
+     Login
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operation-of-file-content">
+     Operation of File Content
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compile-and-execute-files">
+     Compile and execute files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operation-of-files-part-1">
+     Operation of Files (Part 1)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operation-of-files-part-2">
+     Operation of Files (Part 2)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inspecting-system">
+     Inspecting system
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#internet">
+     Internet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tmux">
+     TMUX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#history-operations">
+     History operations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programming-tips">
+   Programming tips
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gcc-and-linking-principle">
+     GCC and Linking Principle
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sanitizer">
+       Sanitizer
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#compile-and-install-external-softwares">
+       Compile and Install External Softwares
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#profiling">
+     Profiling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#path-and-other-environmental-variables">
+     PATH, and Other Environmental Variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-tutorial-on-hpc-server">
+   Python Tutorial on HPC-Server
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-python">
+     Running Python
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#execute-python-script">
+     Execute Python Script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coding-python-in-ipython">
+     Coding Python in IPython
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-an-isolated-python-environment">
+     Create an isolated Python environment
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-a-new-virtual-environment">
+       Create a new virtual environment
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#activate-script">
+       Activate script
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#removing-an-environment">
+       Removing an Environment
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manage-your-own-python-environment-with-pypi">
+     Manage your own Python environment with PyPI
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-started-with-anaconda">
+   Get Started with Anaconda
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#prerequisites-already-satisfied">
+     Prerequisites (already satisfied)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installation">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-more-thing-create-your-own-python-environment">
+     One more thing: Create your own Python environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#activate-and-deactivate">
+     Activate and Deactivate
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#uninstalling-anaconda">
+     Uninstalling Anaconda:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#removing-anaconda-path-from-bashrc">
+       Removing Anaconda path from
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         .bashrc
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conda-commands-for-package-management">
+     Conda commands for package management
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conda-commands-for-environment-management">
+     Conda commands for environment management
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-jupyter-notebook">
+   Access Jupyter Notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recommended-softwares">
+   Recommended Softwares
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#meld">
+     Meld
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lyx">
+     LyX
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="hpc-short-manual-for-researcher">
+<h1><a class="toc-backref" href="#id1">HPC Short Manual for Researcher</a><a class="headerlink" href="#hpc-short-manual-for-researcher" title="Permalink to this headline">#</a></h1>
+<blockquote>
+<div><p>(Updated until : 2023-01-14)<br />
+Author : Eddy Xiao, Kai Chen</p>
+</div></blockquote>
+<blockquote>
+<div><p>Write programs that do one thing and do it well.<br />
+Write programs to work together.<br />
+Write programs to handle text streams, because that is a universal interface.</p>
+<div style="text-align: right"> ---- Unix philosophy (Peter H. Salus)</div>
+</div></blockquote>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#hpc-short-manual-for-researcher" id="id1">HPC Short Manual for Researcher</a></p>
+<ul>
+<li><p><a class="reference internal" href="#backgrounds-and-concepts" id="id2">Backgrounds and Concepts</a></p>
+<ul>
+<li><p><a class="reference internal" href="#unix" id="id3">Unix</a></p></li>
+<li><p><a class="reference internal" href="#linux" id="id4">Linux</a></p></li>
+<li><p><a class="reference internal" href="#gnu-and-free-software" id="id5">GNU and Free Software (自由软件)</a></p></li>
+<li><p><a class="reference internal" href="#linux-distributions" id="id6">Linux Distributions (发行版)</a></p></li>
+<li><p><a class="reference internal" href="#software-repository" id="id7">Software Repository (软件仓库/软件源)</a></p></li>
+<li><p><a class="reference internal" href="#why-choose-linux" id="id8">Why Choose Linux</a></p></li>
+<li><p><a class="reference internal" href="#where-to-start-and-how-to-learn-linux" id="id9">Where to Start and How to Learn Linux</a></p></li>
+<li><p><a class="reference internal" href="#where-to-get-help" id="id10">Where to Get Help</a></p></li>
+<li><p><a class="reference internal" href="#file-system-organization" id="id11">File System Organization</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#one-day-in-linux" id="id12">One Day in Linux</a></p>
+<ul>
+<li><p><a class="reference internal" href="#login" id="id13">Login</a></p></li>
+<li><p><a class="reference internal" href="#operation-of-file-content" id="id14">Operation of File Content</a></p></li>
+<li><p><a class="reference internal" href="#compile-and-execute-files" id="id15">Compile and execute files</a></p></li>
+<li><p><a class="reference internal" href="#operation-of-files-part-1" id="id16">Operation of Files (Part 1)</a></p></li>
+<li><p><a class="reference internal" href="#operation-of-files-part-2" id="id17">Operation of Files (Part 2)</a></p></li>
+<li><p><a class="reference internal" href="#inspecting-system" id="id18">Inspecting system</a></p></li>
+<li><p><a class="reference internal" href="#internet" id="id19">Internet</a></p></li>
+<li><p><a class="reference internal" href="#tmux" id="id20">TMUX</a></p></li>
+<li><p><a class="reference internal" href="#history-operations" id="id21">History operations</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#programming-tips" id="id22">Programming tips</a></p>
+<ul>
+<li><p><a class="reference internal" href="#gcc-and-linking-principle" id="id23">GCC and Linking Principle</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sanitizer" id="id24">Sanitizer</a></p></li>
+<li><p><a class="reference internal" href="#compile-and-install-external-softwares" id="id25">Compile and Install External Softwares</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#profiling" id="id26">Profiling</a></p></li>
+<li><p><a class="reference internal" href="#path-and-other-environmental-variables" id="id27">PATH, and Other Environmental Variables</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#python-tutorial-on-hpc-server" id="id28">Python Tutorial on HPC-Server</a></p>
+<ul>
+<li><p><a class="reference internal" href="#running-python" id="id29">Running Python</a></p></li>
+<li><p><a class="reference internal" href="#execute-python-script" id="id30">Execute Python Script</a></p></li>
+<li><p><a class="reference internal" href="#coding-python-in-ipython" id="id31">Coding Python in IPython</a></p></li>
+<li><p><a class="reference internal" href="#create-an-isolated-python-environment" id="id32">Create an isolated Python environment</a></p>
+<ul>
+<li><p><a class="reference internal" href="#create-a-new-virtual-environment" id="id33">Create a new virtual environment</a></p></li>
+<li><p><a class="reference internal" href="#activate-script" id="id34">Activate script</a></p></li>
+<li><p><a class="reference internal" href="#removing-an-environment" id="id35">Removing an Environment</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#manage-your-own-python-environment-with-pypi" id="id36">Manage your own Python environment with PyPI</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#get-started-with-anaconda" id="id37">Get Started with Anaconda</a></p>
+<ul>
+<li><p><a class="reference internal" href="#prerequisites-already-satisfied" id="id38">Prerequisites (already satisfied)</a></p></li>
+<li><p><a class="reference internal" href="#installation" id="id39">Installation</a></p></li>
+<li><p><a class="reference internal" href="#one-more-thing-create-your-own-python-environment" id="id40">One more thing: Create your own Python environment</a></p></li>
+<li><p><a class="reference internal" href="#activate-and-deactivate" id="id41">Activate and Deactivate</a></p></li>
+<li><p><a class="reference internal" href="#uninstalling-anaconda" id="id42">Uninstalling Anaconda:</a></p>
+<ul>
+<li><p><a class="reference internal" href="#removing-anaconda-path-from-bashrc" id="id43">Removing Anaconda path from <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#conda-commands-for-package-management" id="id44">Conda commands for package management</a></p></li>
+<li><p><a class="reference internal" href="#conda-commands-for-environment-management" id="id45">Conda commands for environment management</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#access-jupyter-notebook" id="id46">Access Jupyter Notebook</a></p></li>
+<li><p><a class="reference internal" href="#recommended-softwares" id="id47">Recommended Softwares</a></p>
+<ul>
+<li><p><a class="reference internal" href="#meld" id="id48">Meld</a></p></li>
+<li><p><a class="reference internal" href="#lyx" id="id49">LyX</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="backgrounds-and-concepts">
+<h2><a class="toc-backref" href="#id2">Backgrounds and Concepts</a><a class="headerlink" href="#backgrounds-and-concepts" title="Permalink to this headline">#</a></h2>
+<section id="unix">
+<h3><a class="toc-backref" href="#id3">Unix</a><a class="headerlink" href="#unix" title="Permalink to this headline">#</a></h3>
+<p>Unix is an operating system that originally developmented at the Bell Labs, by Ken Thompson, Dennis Ritchie, and others in 1970s. Ken Thompson invented the B programming language, the direct predecessor to the C programming language, Dennis Ritchie created the C programming language.
+Unix’s genius design and continuing improvements make it popular and long lasting till today. What’s more, other modern operating systems (including Mac and Windows) is significantly influenced by Unix’s design and spirit also.</p>
+<p>Long Live Unix!</p>
+<p>[1] <a class="reference external" href="https://bbs.sjtu.edu.cn/bbs0an,path,%2Fgroups%2FGROUP%5F3%2FUnix%2FD915C16C6%2FDA27A696E.html">UNIX演义</a></p>
+</section>
+<section id="linux">
+<h3><a class="toc-backref" href="#id4">Linux</a><a class="headerlink" href="#linux" title="Permalink to this headline">#</a></h3>
+<p>Linux is a spiritual successor to the original Unix system. Both of them (and also macOS) are mostly POSIX-compliant [2]. POSIX [1] is a standard that maintain software compatibility between variants of Unix and other operating systems. For example, C source code should be (almost) interchangeable between (almost) POSIX-compliant systems.</p>
+<p>When we say the system is Unix-like, we usually mean the system is mostly POSIX-compliant.</p>
+<p>POSIX standard covers general concepts, system interfaces, shell &amp; utilities etc. It is unlikely that you will need to read it as a beginner or even as an experienced user.</p>
+<ul class="simple">
+<li><p>[1] <a class="reference external" href="https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/">POSIX.1-2017. The Open Group Base Specifications Issue 7, 2018 edition.</a></p></li>
+<li><p>[2] <a class="reference external" href="https://en.wikipedia.org/wiki/POSIX">POSIX, Wikipedia</a></p></li>
+</ul>
+</section>
+<section id="gnu-and-free-software">
+<h3><a class="toc-backref" href="#id5">GNU and Free Software (自由软件)</a><a class="headerlink" href="#gnu-and-free-software" title="Permalink to this headline">#</a></h3>
+<p>GNU means GNU’s Not Unix. ;-)</p>
+<p>It is the name of a software project lead by Richard Stallman (RMS). The GNU project aims to create a free operating system and a free software toolchain on top of it, by collaborative developers.</p>
+<p>The <em>Free</em> means: the users are free to <em>run</em> the software, <em>share</em> it (copy and distribute), study it, and <em>modify</em> it.</p>
+<p>In order to (legally) guarantee these freedom, a licence is necessary: The GNU General Public License (GNU GPL or GPL), which is a “copyleft” licence, in contrast to “copyright”. In simple words, it means that you must publish your source code and licence it under GPL, if it is a derivative work from a GPL licenced code and you are distributing or selling it (with or without charge). See [2,3] for details.</p>
+<p>Examples of Software in GNU projects:</p>
+<p>GNU Compiler Collection (GCC), GNU C library (glibc), GNU Bash shell, GNU Core Utilities (i.e. basic Linux commands), GNOME desktop environment, GNU Octave, GNU Emacs, GIMP (“photoshop” for Linux), Gnumeric (MS Excel compatible).</p>
+<p>Example of GPL or LGPL licenced or GPL/LGPL compatible softwares:</p>
+<p>Linux, Firefox, Python, Android (the core part), TensorFlow, 7z, LyX, pdfTeX.</p>
+<p>Example of NON GPL/LGPL compatible softwares</p>
+<ul class="simple">
+<li><p>Intel Math Kernel Library, i.e. MKL (Freeware, but not opensource, not free to share).</p></li>
+<li><p>Matlab</p></li>
+<li><p>macOS</p></li>
+<li><p>QQ, WeChat, Skype</p></li>
+<li><p>MS Word, MS Excel, Visual Studio, etc.</p></li>
+</ul>
+<p>Ref.</p>
+<ul class="simple">
+<li><p>[1] <a class="reference external" href="https://www.gnu.org/gnu/thegnuproject.en.html">The GNU Project, by Richard Stallman</a>.</p></li>
+<li><p>[2] <a class="reference external" href="https://en.wikipedia.org/wiki/GNU_General_Public_License">GNU General Public License</a>.</p></li>
+<li><p>[3] <a class="reference external" href="https://en.wikipedia.org/wiki/GNU_Lesser_General_Public_License">GNU Lesser General Public License</a>.</p></li>
+</ul>
+</section>
+<section id="linux-distributions">
+<h3><a class="toc-backref" href="#id6">Linux Distributions (发行版)</a><a class="headerlink" href="#linux-distributions" title="Permalink to this headline">#</a></h3>
+<p>Linux kernel together with a large set of user softwares (in a place called software repository). e.g. Ubuntu, Debian, Fedora.</p>
+<p>In most cases, you will use a “Linux distributions” instead of assembling a Linux kernal and user softwares yourself.</p>
+<p>Some Linux distributions focus on out-of-the-box (Ubuntu), some focus on bleeding edge software (Arch, Fedora), some focus on stability (Debian, CentOS).</p>
+</section>
+<section id="software-repository">
+<h3><a class="toc-backref" href="#id7">Software Repository (软件仓库/软件源)</a><a class="headerlink" href="#software-repository" title="Permalink to this headline">#</a></h3>
+<p>Also called software source.</p>
+<p>Software repository is a website that stores and publishes a collection of free softwares that specifically tuned for the distribution. The repository is maintained by developers of the distribution and possibly the original author of the individual software. The softwares in the repository could come from everywhere, e.g. GNU projects, amateur projects, academic projects, and commercial projects.</p>
+<p>The software repository could also contain non-free softwares, non-free in the sense that they are not GPL or LGPL compatible. e.g. mp3 decoding and encoding technology (patented, but expired 2017, now totally free), nvidia-driver (not open source).</p>
+</section>
+<section id="why-choose-linux">
+<h3><a class="toc-backref" href="#id8">Why Choose Linux</a><a class="headerlink" href="#why-choose-linux" title="Permalink to this headline">#</a></h3>
+<ul>
+<li><p>No annoying advertisement, more safe</p>
+<p>Mostly, you will install softwares from the software repository. Softwares from official repository are verified and will be securely downloaded, thus avoid the risk of malicious softwares, and with no ads. High priority security fix will be patched in a urgent pace (within few days after been found).</p>
+</li>
+<li><p>Let <em>you</em> control your computer</p>
+<p>No unwanted background programs running e.g. automatic software updata, force system reboot, virus scan, unexplained internet traffic or CPU usage etc.</p>
+<p>No hiding/joking of CPU usage, network traffic, RAM usage etc.</p>
+<p>Source code are available, when in doubt, or want to make some improvement, or want to learn from it, just check its source code (apt-get source <em>packagename</em>).</p>
+</li>
+<li><p>Run faster</p>
+<p>Linux has a better CPU scheduler and RAM memory management compared to Windows in general. Thus programs could run a few percent (sometimes more than 10 percent) faster after transplant to Linux. e.g., it is observed that Linux version of Mathematica is faster than its Windows version, likely Matlab behaves the same.</p>
+</li>
+<li><p>Rich set of tools for advanced user</p>
+<ul>
+<li><p>For administration of system</p>
+<p>See hardware details without installing extra softwares.</p>
+<p>Highly configurable and with fair documentation (man).</p>
+</li>
+<li><p>Good for batch processing</p>
+<p>Easy to automate complex procedures.</p>
+</li>
+<li><p>For programming</p>
+<p>Pre-installed gcc and python. Nice editors (vim, gedit). Powerful debug/profiling tools.</p>
+</li>
+</ul>
+</li>
+<li><p>A lot of research-oriented programs are developed under Linux, or best running under Linux. For example</p>
+<ul class="simple">
+<li><p>LaTeX (run faster, much easier to install)</p></li>
+<li><p>NEST Simulator (Linux only?)</p></li>
+<li><p>NEURON (Linux only)</p></li>
+<li><p>GNU Octave (much faster)</p></li>
+<li><p>FFTW, LAPACK (much easier to compile)</p></li>
+<li><p>TensorFlow (much easier to compile)</p></li>
+<li><p>ssh (you can have Graphical user interface, without using vnc)</p></li>
+</ul>
+</li>
+<li><p>100% of world top 500 super computers are running Linux.</p>
+<p>At Jun. 2004, for the first time, more than 50% of super computers are running Linux. Then soon Linux dominate super computer list (85% at 2007), eventually reaches 100% at Nov. 2017 and remains today.</p>
+</li>
+</ul>
+<p>[1] <a class="reference external" href="https://www.top500.org/statistics/overtime/">Top 500 / Statistics / Development over Time</a></p>
+</section>
+<section id="where-to-start-and-how-to-learn-linux">
+<h3><a class="toc-backref" href="#id9">Where to Start and How to Learn Linux</a><a class="headerlink" href="#where-to-start-and-how-to-learn-linux" title="Permalink to this headline">#</a></h3>
+<p><a class="reference external" href="http://linux.vbird.org/">鸟哥的linux私房菜</a>. Although reads verbose, it sometime quite beginner-friendly.</p>
+<p>To really learn Linux, you should force yourself to use it for all your works. So start by pick up a Linux distributions. e.g. <a class="reference external" href="http://www.debian.org/">Debian</a>, <a class="reference external" href="https://www.ubuntu.com/">Ubuntu</a>, <a class="reference external" href="https://getfedora.org/">Fedora</a>.</p>
+<p>They all come with good documentations. Just follow the documentation to start your journey.</p>
+<p>Linux may not have the exact software you might expect in Windows or Mac, but there are softwares to achieve the same purpose.</p>
+<p>Record useful commands/softwares in your personal notebook.</p>
+<p>To the author’s experience, there are few tasks that are impossible or too costly to be done under Linux. You might need a virtual machine or Wine [1] to accomplish these task.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1. Bank of China, login web interface.
+2. QQ, wechat. (alternatives: use web based wechat, http://wx.qq.com/)
+3. Games. (alternatives: Use Wine, or dual boot with a real Windows)
+</pre></div>
+</div>
+<p>[1] WineHQ - Run Windows applications on Linux, BSD, Solaris and macOS. <a class="reference external" href="https://www.winehq.org/">https://www.winehq.org/</a></p>
+</section>
+<section id="where-to-get-help">
+<h3><a class="toc-backref" href="#id10">Where to Get Help</a><a class="headerlink" href="#where-to-get-help" title="Permalink to this headline">#</a></h3>
+<blockquote>
+<div><p>RTFM (Read The Fucking Manual)
+—- said folk</p>
+</div></blockquote>
+<ul>
+<li><p>Search in Google, with keywords and name of your Linux distributions</p></li>
+<li><p>Most commands come with a manual</p>
+<p>You can open a command window and type <code class="docutils literal notranslate"><span class="pre">man</span></code> <em>commandname</em> to access its documentation. Or type <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">man</span></code> to get help of <code class="docutils literal notranslate"><span class="pre">man</span></code> itself.</p>
+</li>
+<li><p>Ask who knows linux</p></li>
+</ul>
+</section>
+<section id="file-system-organization">
+<h3><a class="toc-backref" href="#id11">File System Organization</a><a class="headerlink" href="#file-system-organization" title="Permalink to this headline">#</a></h3>
+<blockquote>
+<div><p>“Everything is a file”
+— a feature of Unix(-like) system</p>
+</div></blockquote>
+<p>Linux (absolute) path starts by a slash “/”, called root directory, there is <em>no</em> <code class="docutils literal notranslate"><span class="pre">C:\</span></code> or <code class="docutils literal notranslate"><span class="pre">D:\</span></code>.</p>
+<p>The separator between directories is “/”, in contrast to Windows’ “&quot;.</p>
+<p>Relative path starts by “.”. e.g.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">./a.txt</span></code>, file <code class="docutils literal notranslate"><span class="pre">a.txt</span></code> in the current directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">../a.txt</span></code>, file <code class="docutils literal notranslate"><span class="pre">a.txt</span></code> in the directory of one level up.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">../b/a.txt</span></code>, file <code class="docutils literal notranslate"><span class="pre">a.txt</span></code> in the directory of one level up then down into <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
+</ul>
+<p>“~” is short for your home directory “/home/<span class="math notranslate nohighlight">\({USER}&quot;, &quot;\)</span>{USER}” is your user name.</p>
+<p>Linux directories are arranged by their category (e.g. program, setting, library or document), not by software name or company name (like in Windows).</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>/home       user data all go here
+/boot       linux kernal and configurations about booting.
+/bin        essential system programs (commands)
+/lib        system library
+/etc        system configurations. mostly in plain text.
+/usr/bin    general software executable
+/usr/lib    general software library
+/usr/share  software documentation and (default) settings
+/var/log    system logs
+/dev        hardware devices (shown as files)
+/proc       information about currently running programs
+/sys        settings of hardware and linux kernel
+</pre></div>
+</div>
+<p>The files of a software will be spread in /usr/bin, /usr/lib, /usr/include, /usr/share etc., according to the catalog of each file. Unlike Windows software, mostly in C:\Program Files. In order to manage the spreading files (and software dependency), most Linux systems come with a “Package Manager”. In Debian (also Ubuntu), it is APT (command <code class="docutils literal notranslate"><span class="pre">apt-get</span></code>).</p>
+<p>Every file has access permission, can be shown by command <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>, can be modified by command <code class="docutils literal notranslate"><span class="pre">chmod</span></code>.</p>
+<p>“root” user has the absolute right to do every thing, including deleting the system itself.</p>
+<p>To see the full path to the command, use command <code class="docutils literal notranslate"><span class="pre">which</span></code>. e.g. <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python</span></code>.</p>
+</section>
+</section>
+<section id="one-day-in-linux">
+<h2><a class="toc-backref" href="#id12">One Day in Linux</a><a class="headerlink" href="#one-day-in-linux" title="Permalink to this headline">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The dollar sign ($) at the begining of the code scripts below indicates the user account type you are logged in currently. DO NOT include it when you test those commond on your own command line environment.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Virtual username, directory name, server name and IP are used here for illustration. Please replace them with your own settings during your implementations.</p>
+</div>
+<p>Assume Bill is going to work on our computing server(bill&#64;zcpu), and your local machine is also running Linux (or Unix-like), (bill&#64;laptop).</p>
+<section id="login">
+<h3><a class="toc-backref" href="#id13">Login</a><a class="headerlink" href="#login" title="Permalink to this headline">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ssh<span class="w"> </span>-p<span class="w"> </span><span class="m">22</span><span class="w"> </span>bill@202.121.1.1
+</pre></div>
+</div>
+<p><em>where 202.121.1.1 is the server IP address, and 22 is the port number.</em></p>
+</section>
+<section id="operation-of-file-content">
+<h3><a class="toc-backref" href="#id14">Operation of File Content</a><a class="headerlink" href="#operation-of-file-content" title="Permalink to this headline">#</a></h3>
+<p>Bill wants to run a test C program. So he opens a text editor.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>nano
+</pre></div>
+</div>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">	</span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello?</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>save and exit</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C^X
+</pre></div>
+</div>
+<p>name it abc.c</p>
+<div class="tip admonition">
+<p class="admonition-title">Tips for nano usage</p>
+<p>Nano is a user-friendly text editor for terminal users. Just treat it as the usual text editor in Windows or Linux GUI, though without mouse operation support. Most commonly used shortcuts are listed on the statue bar at the bottom of the window. You can easily get detailed documantations with <code class="docutils literal notranslate"><span class="pre">Ctrl+h</span></code>(denote as <code class="docutils literal notranslate"><span class="pre">C^h</span></code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Of source, you may find other text editor, like vi/vim, which is one of the most powerful editor in Unix-like OS, though it might not be friendly to freshmen.</p>
+</div>
+</div>
+</section>
+<section id="compile-and-execute-files">
+<h3><a class="toc-backref" href="#id15">Compile and execute files</a><a class="headerlink" href="#compile-and-execute-files" title="Permalink to this headline">#</a></h3>
+<p>Now to compile it</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>gcc<span class="w"> </span>abc.c<span class="w"> </span>-o<span class="w"> </span>abc
+</pre></div>
+</div>
+<p>And run it</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./abc
+</pre></div>
+</div>
+<p>Hello?</p>
+<p>OK, works.</p>
+</section>
+<section id="operation-of-files-part-1">
+<h3><a class="toc-backref" href="#id16">Operation of Files (Part 1)</a><a class="headerlink" href="#operation-of-files-part-1" title="Permalink to this headline">#</a></h3>
+<p>Now Bill wants to upload his own files to the server. <em>Run the following command on your laptop.</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scp<span class="w"> </span>-P<span class="w"> </span><span class="m">22</span><span class="w"> </span>/home/bill/work<span class="w"> </span>bill@202.121.1.1:/home/bill/
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Unlike <code class="docutils literal notranslate"><span class="pre">ssh</span></code> command, the augment option here is CAPITAL P, <code class="docutils literal notranslate"><span class="pre">-P</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If multiple files to be uploaded, do it once for all.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scp<span class="w"> </span>-P<span class="w"> </span><span class="m">22</span><span class="w"> </span>/home/bill/work1<span class="w"> </span>/home/bill/work2<span class="w"> </span>/home/bill/work3<span class="w"> </span>bill@202.121.1.1:/home/bill/
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using Windows OS, you may use WinSCP to manage your files on server, which provides a nice GUI and is more user-friendly. [<a class="reference external" href="https://winscp.net/eng/index.php">More details</a>]</p>
+</div>
+<p>Now Bill finds that constantly typing the address and port is anoiying. So let’s alias it. <em>Run the follow commands on your laptop.</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.ssh
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/.ssh
+$<span class="w"> </span>nano<span class="w"> </span>config
+</pre></div>
+</div>
+<p>add following lines into ssh config file</p>
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span>Host zcpu
+    HostName <span class="m">202</span>.<span class="m">121</span>.<span class="m">1</span>.<span class="m">1</span>
+    Port <span class="m">22</span>
+    <span class="nb">User</span> bill
+</pre></div>
+</div>
+<p>Now Bill can use upload files in a much simpler way.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scp<span class="w"> </span>/home/bill/work<span class="w"> </span>zcpu:/home/bill/
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For multi-file version,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scp<span class="w"> </span>/home/bill/work1<span class="w"> </span>/home/bill/work2<span class="w"> </span>/home/bill/work3<span class="w"> </span>zcpu:/home/bill/
+</pre></div>
+</div>
+</div>
+<p>Similarly for download data from the server.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scp<span class="w"> </span>zcpu:/home/bill/data<span class="w"> </span>/home/bill/
+</pre></div>
+</div>
+<p>Now Bill can login in like this.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ssh<span class="w"> </span>zcpu
+</pre></div>
+</div>
+</section>
+<section id="operation-of-files-part-2">
+<h3><a class="toc-backref" href="#id17">Operation of Files (Part 2)</a><a class="headerlink" href="#operation-of-files-part-2" title="Permalink to this headline">#</a></h3>
+<p>After uploading his own file, Bill wants to create a new folder to store his files.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>foo
+</pre></div>
+</div>
+<p>Move file to the folder <code class="docutils literal notranslate"><span class="pre">foo</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mv<span class="w"> </span>work<span class="w"> </span>foo/
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no explicit rename command in Linux. Use <code class="docutils literal notranslate"><span class="pre">mv</span></code> to rename existing files.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mv<span class="w"> </span>work<span class="w"> </span>work1<span class="w">   </span><span class="c1"># rename work as work1 </span>
+</pre></div>
+</div>
+</div>
+<p>Now Bill wants to move to <code class="docutils literal notranslate"><span class="pre">foo</span></code> folder and create a copy of <code class="docutils literal notranslate"><span class="pre">work</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>foo
+$<span class="w"> </span>cp<span class="w"> </span>work<span class="w"> </span>work_cp<span class="w">   </span><span class="c1"># create a copy of work as work_cp</span>
+</pre></div>
+</div>
+<p>Besides, Bill wants to know the information of files in current folder.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls<span class="w"> </span>-l<span class="w"> </span>
+total<span class="w"> </span><span class="m">16</span>
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>bill<span class="w">  </span>bill<span class="w">  </span><span class="m">1</span><span class="w"> </span>Jan<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">12</span>:00<span class="w"> </span>work
+-rw-r--r--<span class="w">  </span><span class="m">1</span><span class="w"> </span>bill<span class="w">  </span>bill<span class="w">  </span><span class="m">1</span><span class="w"> </span>Jan<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">12</span>:00<span class="w"> </span>work_cp
+</pre></div>
+</div>
+<p>After a while, Bill wants to delete work_cp.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>rm<span class="w"> </span>work_cp
+</pre></div>
+</div>
+</section>
+<section id="inspecting-system">
+<h3><a class="toc-backref" href="#id18">Inspecting system</a><a class="headerlink" href="#inspecting-system" title="Permalink to this headline">#</a></h3>
+<p>When using the computating server, Bill wants to inspect the state of operating system as well as programs and the available resources.</p>
+<p>First of all, about the current size of home directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>du<span class="w"> </span>-sh<span class="w"> </span><span class="nv">$HOME</span>
+</pre></div>
+</div>
+<p>Total usage of file system and available disk space.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>df<span class="w"> </span>-ht<span class="w"> </span>ext4
+</pre></div>
+</div>
+<p>Specifications of the server’s CPU</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>lscpu
+</pre></div>
+</div>
+<p>Information and current state about server’s GPU (only available on GPU server)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>nvidia-smi
+</pre></div>
+</div>
+<p>Most importantly, Bill wants to inspect his programs as well as the resource available on the server.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>top
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>top - 23:27:57 up 25 days,  6:30, 15 users,  load average: 18.23, 15.50, 8.92
+Tasks: 826 total,   2 running, 518 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 25.6 us,  6.8 sy,  0.0 ni, 67.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem : 26358241+total,  1502220 free, 18863252+used, 73447664 buff/cache
+KiB Swap:        0 total,        0 free,        0 used. 73098776 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+19899 mike      20   0 9640456 1.072g 248604 S  2002  0.4 186:07.75 MATLAB
+19272 john      20   0  0.171t 0.171t   3340 R  99.7 69.6  72:10.56 t3
+20426 mike      20   0   49704   4872   3436 S   1.6  0.0   0:08.43 top
+19555 john      20   0   49732   4996   3484 S   1.3  0.0   0:36.48 top
+21401 bill      20   0   49740   4816   3448 R   1.3  0.0   0:00.50 top
+55645 mike      20   0   49836   5176   3500 S   1.3  0.0  56:45.55 top
+    9 root      20   0       0      0      0 I   0.3  0.0  14:03.25 rcu_sched
+    4708 gdm       20   0  591400  27924  17284 S   0.3  0.0  31:56.19 gsd-color
+    4828 kernoops  20   0   56936   2364   1912 S   0.3  0.0   0:56.01 kerneloops
+    1 root      20   0  226096   9896   6668 S   0.0  0.0   0:33.61 systemd
+    2 root      20   0       0      0      0 S   0.0  0.0   0:00.32 kthreadd
+    4 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 kworker/0:0H
+    5 root      20   0       0      0      0 I   0.0  0.0   1:30.69 kworker/u128:0
+    7 root       0 -20       0      0      0 I   0.0  0.0   0:00.00 mm_percpu_wq
+    8 root      20   0       0      0      0 S   0.0  0.0   0:01.32 ksoftirqd/0
+</pre></div>
+</div>
+<p>The first two lines illustrate the total up time, the number of users, the number of tasks, the number of running tasks of the server. The third line shows the detailed CPU usage, with <code class="docutils literal notranslate"><span class="pre">us</span></code> for user usage, <code class="docutils literal notranslate"><span class="pre">sy</span></code> for system usage, <code class="docutils literal notranslate"><span class="pre">wa</span></code> for waiting usage. (<strong>NOTE</strong>: if <code class="docutils literal notranslate"><span class="pre">wa</span></code> percent is high, which CPU is waiting for I/O operations, it might indicate the I/O bottle neck of your program.) Next two lines shows the detailed RAM(memory) and swap usage.</p>
+<p>The rest of table lists all the detailed information about all processes. By default, they are sorted in the descent order of CPU usage. Pay attention of the <code class="docutils literal notranslate"><span class="pre">RES</span></code> column, which is the actual memory usage of processes.</p>
+<div class="tip admonition">
+<p class="admonition-title">Tips for top</p>
+<ul>
+<li><p>press <code class="docutils literal notranslate"><span class="pre">e</span></code> to change units of each process (None-&gt;k-&gt;m-&gt;g-&gt;t-&gt;p: B-&gt;KB-&gt;MB-&gt;GB-&gt;TB-&gt;PB)</p></li>
+<li><p>press <code class="docutils literal notranslate"><span class="pre">E</span></code> to change units of total resources (None-&gt;k-&gt;m-&gt;g-&gt;t-&gt;p: B-&gt;KB-&gt;MB-&gt;GB-&gt;TB-&gt;PB)</p></li>
+<li><p>press <code class="docutils literal notranslate"><span class="pre">k</span></code> and the PID of target process to kill the target process</p>
+<p>e.g. to kill the bill’s top process, whose PID is 21401</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>k
+$<span class="w"> </span><span class="m">21401</span>
+$
+</pre></div>
+</div>
+<p>It is possible that the program refuse to exit (e.g. MATLAB), in which case you can send the program a “signal 9”.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>k
+$<span class="w"> </span><span class="m">21401</span>
+$<span class="w"> </span><span class="m">9</span>
+</pre></div>
+</div>
+</li>
+<li><p>use <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> to change the sort column of processes (default sort column is %CPU)</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Another way to check the status of specific command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ps<span class="w"> </span>-e<span class="w"> </span><span class="p">|</span>grep<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="p">|</span>less
+</pre></div>
+</div>
+</div>
+<p>Bill opened 10 python processes by accident. So he wants to kill all of them together.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">jobs</span>
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w">    </span>suspended<span class="w"> </span><span class="o">(</span>tty<span class="w"> </span>output<span class="o">)</span><span class="w">  </span>python
+<span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="w">    </span>suspended<span class="w"> </span><span class="o">(</span>tty<span class="w"> </span>output<span class="o">)</span><span class="w">  </span>python
+<span class="o">[</span><span class="m">3</span><span class="o">]</span><span class="w">    </span>suspended<span class="w"> </span><span class="o">(</span>tty<span class="w"> </span>output<span class="o">)</span><span class="w">  </span>python
+<span class="o">[</span><span class="m">4</span><span class="o">]</span><span class="w">    </span>suspended<span class="w"> </span><span class="o">(</span>tty<span class="w"> </span>output<span class="o">)</span><span class="w">  </span>python
+<span class="o">[</span><span class="m">5</span><span class="o">]</span><span class="w">    </span>suspended<span class="w"> </span><span class="o">(</span>tty<span class="w"> </span>output<span class="o">)</span><span class="w">  </span>python
+<span class="o">[</span><span class="m">6</span><span class="o">]</span><span class="w">    </span>suspended<span class="w"> </span><span class="o">(</span>tty<span class="w"> </span>output<span class="o">)</span><span class="w">  </span>python
+<span class="o">[</span><span class="m">7</span><span class="o">]</span><span class="w">    </span>suspended<span class="w"> </span><span class="o">(</span>tty<span class="w"> </span>output<span class="o">)</span><span class="w">  </span>python
+<span class="o">[</span><span class="m">8</span><span class="o">]</span><span class="w">    </span>suspended<span class="w"> </span><span class="o">(</span>tty<span class="w"> </span>output<span class="o">)</span><span class="w">  </span>python
+<span class="o">[</span><span class="m">9</span><span class="o">]</span><span class="w">  </span>-<span class="w"> </span>suspended<span class="w"> </span><span class="o">(</span>tty<span class="w"> </span>output<span class="o">)</span><span class="w">  </span>python
+<span class="o">[</span><span class="m">10</span><span class="o">]</span><span class="w">  </span>+<span class="w"> </span>suspended<span class="w"> </span><span class="o">(</span>tty<span class="w"> </span>output<span class="o">)</span><span class="w">  </span>python
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pkill<span class="w"> </span>python
+</pre></div>
+</div>
+</section>
+<section id="internet">
+<h3><a class="toc-backref" href="#id19">Internet</a><a class="headerlink" href="#internet" title="Permalink to this headline">#</a></h3>
+<p>Bill wants to download a file from <a class="reference external" href="http://website.com/files/file.zip">http://website.com/files/file.zip</a> over HTTP. <em>Do not try this address since it’s invalid.</em></p>
+<p>Firstly, he needs to check whether the internet connection is avaiable. <em>(Optional)</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ping<span class="w"> </span>website.com
+</pre></div>
+</div>
+<p>Then, Bill can simply use <code class="docutils literal notranslate"><span class="pre">wget</span></code> command to download the file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>wget<span class="w"> </span>http://website.com/files/file.zip
+</pre></div>
+</div>
+</section>
+<section id="tmux">
+<h3><a class="toc-backref" href="#id20">TMUX</a><a class="headerlink" href="#tmux" title="Permalink to this headline">#</a></h3>
+<p>Occasionally, Bill would suffer from the broken pipe issue due to the poor network connection. In case of losting working data, Bill decides to use tmux on server, as windows manager. <em><code class="docutils literal notranslate"><span class="pre">tmux</span></code> can prevent your current program from being interrupted due to the broken network connection. You can retrieve your working program when you relogin the server.</em></p>
+<p>Start a new session</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tmux
+$<span class="w"> </span>tmux<span class="w"> </span>new<span class="w">  </span><span class="c1">#	both works</span>
+</pre></div>
+</div>
+<p>Detach from session</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>Ctrl-a<span class="w"> </span>d
+</pre></div>
+</div>
+<p>i.e. press the key Ctrl and the key A simultaneously, release both, then press the key D.</p>
+<p>List existing sessions</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tmux<span class="w"> </span>ls
+</pre></div>
+</div>
+<p>Attach to last session</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tmux<span class="w"> </span>attach<span class="w"> </span>
+</pre></div>
+</div>
+<p>Exit and close current session</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">exit</span>
+</pre></div>
+</div>
+<p>Create new window</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>Ctrl-a<span class="w">  </span>c
+</pre></div>
+</div>
+<p>Close current window</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>Ctrl-a<span class="w">  </span><span class="p">&amp;</span>
+</pre></div>
+</div>
+<p>Next window</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>Ctrl-a<span class="w">  </span>n
+</pre></div>
+</div>
+<p>Switch/select window by number</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>Ctrl-a<span class="w">  </span><span class="m">0</span><span class="w"> </span>...<span class="w"> </span><span class="m">9</span>
+</pre></div>
+</div>
+<p>More instructions : <a class="reference external" href="https://tmuxcheatsheet.com">https://tmuxcheatsheet.com</a></p>
+</section>
+<section id="history-operations">
+<h3><a class="toc-backref" href="#id21">History operations</a><a class="headerlink" href="#history-operations" title="Permalink to this headline">#</a></h3>
+<p>Bill suddenly forgets to the gcc command to compile c++ code. So he goes to history command to look up his previous command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">history</span>
+</pre></div>
+</div>
+<p>However, there are too much commands’ histories to be contained in a single screen. So Bill uses history command together with less command in a pipe line format.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">history</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>less
+</pre></div>
+</div>
+<p>Now Bill can just use up and down button to browse all history contents one by one. Besides, to find the gcc command, simply, Bill uses the keywords searching function.</p>
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span>/<span class="k">g</span><span class="p">++</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">n</span></code> to search the next occurrence, <code class="docutils literal notranslate"><span class="pre">Shift-n</span></code> to search the previous occurrence.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">-i</span></code> to ignore (or not ignore) case in searches.</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="programming-tips">
+<h2><a class="toc-backref" href="#id22">Programming tips</a><a class="headerlink" href="#programming-tips" title="Permalink to this headline">#</a></h2>
+<section id="gcc-and-linking-principle">
+<h3><a class="toc-backref" href="#id23">GCC and Linking Principle</a><a class="headerlink" href="#gcc-and-linking-principle" title="Permalink to this headline">#</a></h3>
+<p>Bill writes a C++ project which contains several files, including main.cpp, functions.cpp, functions.h. Now he need to compile those header file and source files into a excutable program.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>g++<span class="w"> </span>-o<span class="w"> </span>exc.out<span class="w"> </span>functions.cpp<span class="w"> </span>main.cpp
+</pre></div>
+</div>
+<p>In the compiling command above, one option is explicitly specified.</p>
+<p><code class="docutils literal notranslate"><span class="pre">-o</span></code> output file</p>
+<p>There are other useful options, including</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-l</span></code> Link on Objective-C and Objective-C++ program, e.g., <code class="docutils literal notranslate"><span class="pre">-lm</span></code> <code class="docutils literal notranslate"><span class="pre">-lfftw3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-I</span></code> Add the directory dir to the list of directories to be searched for header files during preprocessing.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-L</span></code> Add directory dir to the list of directories to be searched for -l</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-O</span></code>, <code class="docutils literal notranslate"><span class="pre">-O2</span></code> Compile with optimization (-Os, -O, -O2, …)</p></li>
+</ul>
+<section id="sanitizer">
+<h4><a class="toc-backref" href="#id24">Sanitizer</a><a class="headerlink" href="#sanitizer" title="Permalink to this headline">#</a></h4>
+<p>Sometimes, there are some potential undefined behaviors or events of memory leaking in Bill’s program. Thus, in order to enable run-time analysis for those dangrous events, Bill uses the follow compiling options.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>-fsanitize=undefined
+-fsanitize=leak
+</pre></div>
+</div>
+</section>
+<section id="compile-and-install-external-softwares">
+<h4><a class="toc-backref" href="#id25">Compile and Install External Softwares</a><a class="headerlink" href="#compile-and-install-external-softwares" title="Permalink to this headline">#</a></h4>
+<p>Now Bill needs to compile and install external softwares from source files. Here is one of the commonly used procedures.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/path/of/source/<span class="w">                       </span><span class="c1"># move to the directory of source files</span>
+$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>build<span class="w">                            </span><span class="c1"># create build directory</span>
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build<span class="w">                                  </span><span class="c1"># move to build directory</span>
+$<span class="w"> </span>../configure<span class="w"> </span>--prefix<span class="o">=</span>/path/to/install/<span class="w">   </span><span class="c1"># config compilation with prefix option</span>
+$<span class="w"> </span>make<span class="w">                                      </span><span class="c1"># make target files</span>
+$<span class="w"> </span>make<span class="w"> </span>-j<span class="w"> </span><span class="m">32</span><span class="w">                                </span><span class="c1"># or make in parallel with 32 cores</span>
+$<span class="w"> </span>make<span class="w"> </span>install<span class="w">                              </span><span class="c1"># copy the built files to the target directory, specified with prefix options in ../configure step</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="profiling">
+<h3><a class="toc-backref" href="#id26">Profiling</a><a class="headerlink" href="#profiling" title="Permalink to this headline">#</a></h3>
+<p>Bill’s program suffers a low performance. Bill analyzes its performance using perf.</p>
+<p>First of all, program needs to be compiled with specified option ‘-g’.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>g++<span class="w"> </span>-o<span class="w"> </span>exc.out<span class="w"> </span>functions.cpp<span class="w"> </span>main.cpp<span class="w"> </span>-g
+</pre></div>
+</div>
+<p>Run perf to record the performance. Use the program as usual during profiling.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>perf<span class="w"> </span>record<span class="w"> </span>./exc.out
+</pre></div>
+</div>
+<p>Call perf report to view the performance report.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>perf<span class="w"> </span>report<span class="w"> </span>
+</pre></div>
+</div>
+<p>More details : <a class="reference external" href="https://perf.wiki.kernel.org/index.php/Tutorial">https://perf.wiki.kernel.org/index.php/Tutorial</a></p>
+</section>
+<section id="path-and-other-environmental-variables">
+<h3><a class="toc-backref" href="#id27">PATH, and Other Environmental Variables</a><a class="headerlink" href="#path-and-other-environmental-variables" title="Permalink to this headline">#</a></h3>
+<p><em>Environmental variables</em> are named values which can be accessed by running programs. It is used as a mechanism to pass parameters to subprocess (program that is started by another program), thus affect the subprocess’ behaviour. For example, Shell, as a subprocess of OS, uses <code class="docutils literal notranslate"><span class="pre">PATH</span></code> to determine where to find runnable commands. When starts a program from a Shell, all the environmental variables in that shell will be copied and passed to the program just started, the program is then allow to read and modify its own copy of environmental variables.</p>
+<p>In most Shell (e.g. Bash), prepending a <code class="docutils literal notranslate"><span class="pre">$</span></code> sign to the variable name means substitute its value in situ, thus <code class="docutils literal notranslate"> <span class="pre">$PATH</span></code> prints the value of <code class="docutils literal notranslate"><span class="pre">PATH</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">PATH</span></code> is an environmental variable in Linux and other Unix-like operating systems that tells the shell which directories to search for executable files (i.e., ready-to-run programs) in response to commands issued by a user.</p>
+<p>Several ways to view the contents of PATH.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>env<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>PATH
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span><span class="w"> </span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/opt/dell/srvadmin/bin:/opt/dell/srvadmin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+</pre></div>
+</div>
+<p>Look at the contents of PATH variable, which are bunches of colon-seperated directories. Now Bill wants to add the directory /usr/sbin to the PATH.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/sbin
+</pre></div>
+</div>
+<p>Now, view the contents of PATH again.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/opt/dell/srvadmin/bin:/opt/dell/srvadmin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/sbin
+</pre></div>
+</div>
+<p>Note that, an addition to a user’s PATH variable can be made permanent by adding it to that user’s .bash_profile file. .bash_profile is a hidden file in each user’s home directory that defines any specific environmental variables and startup programs for that user.</p>
+<p><strong>Remarks:</strong>
+The same mechanism exists for other types of files that some program is going to search for by name. Here are a few typical PATH-like variables.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PATH</span></code>: executables (e.g. /home/username/bin:/usr/local/bin:/usr/bin:/bin).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MANPATH</span></code>: manual pages (e.g. /usr/local/man:/usr/man).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code>: native code libraries (on Linux, in addition to the value of this variable, the lookup path typically contains /usr/local/lib, /usr/lib, /lib and a few others). The name LD comes from dynamic loader, the system component that loads libraries into dynamically linked executables.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>: Python libraries (e.g. /usr/local/lib/python:/usr/lib/python:/usr/lib/python2.7).</p></li>
+</ul>
+</section>
+</section>
+<section id="python-tutorial-on-hpc-server">
+<h2><a class="toc-backref" href="#id28">Python Tutorial on HPC-Server</a><a class="headerlink" href="#python-tutorial-on-hpc-server" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>If you want to use Python on your own laptop, you may simply use <a class="reference external" href="https://pip.pypa.io/en/stable/quickstart/">PyPI</a> or <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/#getting-started-with-anaconda">Anaconda</a> to build your Python distribution. If you are more comfortable with IDE(Integrated Development Environment), <a class="reference external" href="https://www.spyder-ide.org">Spyder</a>, <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a>, <a class="reference external" href="https://visualstudio.microsoft.com">Visual Studio</a> are recommended here.</p>
+</div></blockquote>
+<section id="running-python">
+<h3><a class="toc-backref" href="#id29">Running Python</a><a class="headerlink" href="#running-python" title="Permalink to this headline">#</a></h3>
+<p>We’ve installed essential Python distributions for you. You can simply run python(for Python 2.7), python3(for Python 3.6), python3.7(for Python 3.7).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Python<span class="w"> </span><span class="m">3</span>.6.8<span class="w"> </span><span class="o">(</span>default,<span class="w"> </span>Aug<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">2019</span>,<span class="w"> </span><span class="m">17</span>:12:48<span class="o">)</span>
+<span class="o">[</span>GCC<span class="w"> </span><span class="m">8</span>.3.0<span class="o">]</span><span class="w"> </span>on<span class="w"> </span>linux
+Type<span class="w"> </span><span class="s2">&quot;help&quot;</span>,<span class="w"> </span><span class="s2">&quot;copyright&quot;</span>,<span class="w"> </span><span class="s2">&quot;credits&quot;</span><span class="w"> </span>or<span class="w"> </span><span class="s2">&quot;license&quot;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>information.
+&gt;&gt;&gt;
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello world
+</pre></div>
+</div>
+</div>
+</div>
+<p>Exit</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="execute-python-script">
+<h3><a class="toc-backref" href="#id30">Execute Python Script</a><a class="headerlink" href="#execute-python-script" title="Permalink to this headline">#</a></h3>
+<p>Create a Python file, <code class="docutils literal notranslate"><span class="pre">test.py</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;print(&#39;Hello world&#39;)&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>test.py
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can write your own Python file with your text editor.</p>
+</div>
+<p>Run Python file, <a class="reference external" href="http://test.py">test.py</a>, in command line directly.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>test.py
+</pre></div>
+</div>
+</section>
+<section id="coding-python-in-ipython">
+<h3><a class="toc-backref" href="#id31">Coding Python in IPython</a><a class="headerlink" href="#coding-python-in-ipython" title="Permalink to this headline">#</a></h3>
+<p>IPython is a powerful interactive Python shell, provides a rich toolkit to help you make the most out of using Python interactively.</p>
+<p><em>Refer from <a class="reference external" href="https://ipython.readthedocs.io/en/stable/interactive/python-ipython-diff.html">https://ipython.readthedocs.io/en/stable/interactive/python-ipython-diff.html</a></em></p>
+<ol>
+<li><p>Accessing help</p>
+<ul>
+<li><p>Using question mark for requesting general IPython help.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>In<span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span>?
+
+IPython<span class="w"> </span>--<span class="w"> </span>An<span class="w"> </span>enhanced<span class="w"> </span>Interactive<span class="w"> </span><span class="nv">Python</span>
+<span class="o">=========================================</span>
+
+IPython<span class="w"> </span>offers<span class="w"> </span>a<span class="w"> </span>fully<span class="w"> </span>compatible<span class="w"> </span>replacement<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>standard<span class="w"> </span>Python
+interpreter,<span class="w"> </span>with<span class="w"> </span>convenient<span class="w"> </span>shell<span class="w"> </span>features,<span class="w"> </span>special<span class="w"> </span>commands,<span class="w"> </span><span class="nb">command</span>
+<span class="nb">history</span><span class="w"> </span>mechanism<span class="w"> </span>and<span class="w"> </span>output<span class="w"> </span>results<span class="w"> </span>caching.
+
+At<span class="w"> </span>your<span class="w"> </span>system<span class="w"> </span><span class="nb">command</span><span class="w"> </span>line,<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="s1">&#39;ipython -h&#39;</span><span class="w"> </span>to<span class="w"> </span>see<span class="w"> </span>the<span class="w"> </span><span class="nb">command</span><span class="w"> </span>line
+options<span class="w"> </span>available.<span class="w"> </span>This<span class="w"> </span>document<span class="w"> </span>only<span class="w"> </span>describes<span class="w"> </span>interactive<span class="w"> </span>features.
+
+GETTING<span class="w"> </span>HELP
+...
+</pre></div>
+</div>
+</li>
+<li><p>A single question mark before, or after an object available in current namespace will show help relative to this object:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>In<span class="w"> </span><span class="o">[</span><span class="m">2</span><span class="o">]</span>:<span class="w"> </span>object?
+Docstring:<span class="w"> </span>The<span class="w"> </span>most<span class="w"> </span>base<span class="w"> </span><span class="nb">type</span>
+Type:<span class="w">      </span><span class="nb">type</span>
+</pre></div>
+</div>
+</li>
+<li><p>A double question mark will try to pull out more information about the object, and if possible display the python source code of this object.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>In[1]: import collections
+
+In[2]: collections.Counter??
+
+Init signature: collections.Counter(*args, **kwds)
+Source:
+class Counter(dict):
+        &#39;&#39;&#39;Dict subclass for counting hashable items.  Sometimes called a bag
+        or multiset.  Elements are stored as dictionary keys and their counts
+        are stored as dictionary values.
+
+        &gt;&gt;&gt; c = Counter(&#39;abcdeabcdabcaba&#39;)  # count elements from a string
+
+        &gt;&gt;&gt; c.most_common(3)                # three most common elements
+        [(&#39;a&#39;, 5), (&#39;b&#39;, 4), (&#39;c&#39;, 3)]
+        &gt;&gt;&gt; sorted(c)                       # list all unique elements
+        [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]
+        &gt;&gt;&gt; &#39;&#39;.join(sorted(c.elements()))   # list elements with repetitions
+        &#39;aaaaabbbbcccdde&#39;
+        ...
+</pre></div>
+</div>
+</li>
+<li><p>If you are looking for an object, the use of wildcards <code class="docutils literal notranslate"><span class="pre">*</span></code> in conjunction with question mark will allow you to search current namespace for object with matching names:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>In<span class="w"> </span><span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span>*int*?
+FloatingPointError
+int
+print
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>Shell Assignment
+When doing interactive computing it is common to need to access the underlying shell. This is doable through the use of the exclamation mark <code class="docutils literal notranslate"><span class="pre">!</span></code> (or bang). For instance,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>In<span class="o">[</span><span class="m">1</span><span class="o">]</span>:<span class="w"> </span>!pwd
+/User/home/
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="create-an-isolated-python-environment">
+<h3><a class="toc-backref" href="#id32">Create an isolated Python environment</a><a class="headerlink" href="#create-an-isolated-python-environment" title="Permalink to this headline">#</a></h3>
+<p><em>Refer from <a class="reference external" href="https://virtualenv.pypa.io/en/latest/userguide/">https://virtualenv.pypa.io/en/latest/userguide/</a></em></p>
+<p><code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> is a tool to create such an isolated Python environment. In this case, it isolate its own installation directories, which is convenient and safe for version management of packages.</p>
+<section id="create-a-new-virtual-environment">
+<h4><a class="toc-backref" href="#id33">Create a new virtual environment</a><a class="headerlink" href="#create-a-new-virtual-environment" title="Permalink to this headline">#</a></h4>
+<p>There is one basic command in <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>virtualenv<span class="w"> </span>ENV
+</pre></div>
+</div>
+<p>Here, <code class="docutils literal notranslate"><span class="pre">ENV</span></code> is a directory in which to place the new virtual environment.</p>
+<div class="admonition-options admonition">
+<p class="admonition-title">Options</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-p</span> <span class="pre">PYTHON_EXE,</span> <span class="pre">--python=PYTHON_EXE</span></code>: The Python interpreter to use, e.g., <code class="docutils literal notranslate"><span class="pre">--python=python3.7</span></code> will use the python3.7 interpreter to create the new environment. You may choose other interpreters installed in the system.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--system-site-packages</span></code>: If you build with it, your virtual environment will inherit packages from your global site-package directories. If you want isolation from the global system and manage your own packages, do not use this flag.</p></li>
+</ol>
+</div>
+</section>
+<section id="activate-script">
+<h4><a class="toc-backref" href="#id34">Activate script</a><a class="headerlink" href="#activate-script" title="Permalink to this headline">#</a></h4>
+<p>In a newly created virtualenv there will also be a activate shell script. On Posix systems, this resides in <code class="docutils literal notranslate"><span class="pre">/ENV/bin/</span></code>, so you can run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/path/to/ENV/bin/activate
+</pre></div>
+</div>
+<p>to activate the environment.</p>
+<p>To deactivate your environment, just run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deactivate
+</pre></div>
+</div>
+</section>
+<section id="removing-an-environment">
+<h4><a class="toc-backref" href="#id35">Removing an Environment</a><a class="headerlink" href="#removing-an-environment" title="Permalink to this headline">#</a></h4>
+<p>Removing a virtual environment is simply done by deactivating it and deleting the environment folder with all its contents.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-r<span class="w"> </span>/path/to/ENV
+</pre></div>
+</div>
+</section>
+</section>
+<section id="manage-your-own-python-environment-with-pypi">
+<h3><a class="toc-backref" href="#id36">Manage your own Python environment with PyPI</a><a class="headerlink" href="#manage-your-own-python-environment-with-pypi" title="Permalink to this headline">#</a></h3>
+<p><em>Refer from <a class="reference external" href="https://pip.pypa.io/en/stable/quickstart/">https://pip.pypa.io/en/stable/quickstart/</a></em></p>
+<p>Once you activate a virtual environment, you can use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to manage your packages.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>SomePackage<span class="w">             </span><span class="c1"># install a package from PyPI (https://pypi.org)</span>
+pip<span class="w"> </span>show<span class="w"> </span>--files<span class="w"> </span>SomePackage<span class="w">        </span><span class="c1"># show what files were installed for SomePackage</span>
+pip<span class="w"> </span>list<span class="w"> </span>--outdated<span class="w">                 </span><span class="c1"># list what packages are outdated</span>
+pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>SomePackage<span class="w">   </span><span class="c1"># upgrade a package</span>
+pip<span class="w"> </span>uninstall<span class="w"> </span>SomePackage<span class="w">           </span><span class="c1"># uninstall a package</span>
+pip<span class="w"> </span>&lt;command&gt;<span class="w"> </span>--help<span class="w">                </span><span class="c1"># more help for specific pip command</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="get-started-with-anaconda">
+<h2><a class="toc-backref" href="#id37">Get Started with Anaconda</a><a class="headerlink" href="#get-started-with-anaconda" title="Permalink to this headline">#</a></h2>
+<p>Anaconda is a highly integrated Python package manager and environment manager. Get <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf">Conda Cheat Sheet</a> Here.</p>
+<section id="prerequisites-already-satisfied">
+<h3><a class="toc-backref" href="#id38">Prerequisites (already satisfied)</a><a class="headerlink" href="#prerequisites-already-satisfied" title="Permalink to this headline">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apt-get<span class="w"> </span>install<span class="w"> </span>libgl1-mesa-glx<span class="w"> </span>libegl1-mesa<span class="w"> </span>libxrandr2<span class="w"> </span>libxrandr2<span class="w"> </span>libxss1<span class="w"> </span>libxcursor1<span class="w"> </span>libxcomposite1<span class="w"> </span>libasound2<span class="w"> </span>libxi6<span class="w"> </span>libxtst6<span class="w"> </span><span class="c1">#(Debian/Ubuntu)</span>
+</pre></div>
+</div>
+</section>
+<section id="installation">
+<h3><a class="toc-backref" href="#id39">Installation</a><a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h3>
+<p>For x86 systems,</p>
+<ol>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">wget</span></code> to download the <a class="reference external" href="https://www.anaconda.com/distribution/#linux">Anaconda install for Linux</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>-c<span class="w"> </span>https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh<span class="w"> </span>-O<span class="w"> </span>~/Anaconda3-2019.10-Linux-x86_64.sh
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">Anaconda3-2019.10-Linux-x86_64.sh</span></code> is used here as an example. You might find the latest verion or other historical verion frome the Link above.</p>
+</div>
+</li>
+<li><p>(Optional, but recommended) Verify data integrity with SHA-256. Check your own hashes with official released ones <a class="reference external" href="https://docs.anaconda.com/anaconda/install/hashes/">here</a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sha256sum<span class="w"> </span>~/Anaconda3-2019.10-Linux-x86_64.sh
+</pre></div>
+</div>
+</li>
+<li><p>Run the silent installation of Anaconda for Linux.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>~/Anaconda3-2019.10-Linux-x86_64.sh<span class="w"> </span>-b<span class="w"> </span>-p<span class="w"> </span><span class="nv">$HOME</span>/anaconda
+</pre></div>
+</div>
+<p>The installer will not prompt you for anything, including setup of your shell to activate conda. To add this activation in your current shell session:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span><span class="nv">$HOME</span>/anaconda/bin/conda<span class="w"> </span>shell.bash<span class="w"> </span>hook<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>With this activated shell, you can then install conda’s shell functions for easier access in the future:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># initiate conda</span>
+conda<span class="w"> </span>init
+</pre></div>
+</div>
+<p>If you prefer that conda’s base environment not be activated on startup of shell, set the <code class="docutils literal notranslate"><span class="pre">auto_activate_base</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">false</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>auto_activate_base<span class="w"> </span><span class="nb">false</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="one-more-thing-create-your-own-python-environment">
+<h3><a class="toc-backref" href="#id40">One more thing: Create your own Python environment</a><a class="headerlink" href="#one-more-thing-create-your-own-python-environment" title="Permalink to this headline">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a new conda environment named as tf-env，with python version 3.7</span>
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>tf-env<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
+<span class="c1"># activate tf-env</span>
+<span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>tf-env
+<span class="c1"># install 必要python库</span>
+conda<span class="w"> </span>install<span class="w"> </span>numpy<span class="w"> </span>scipy<span class="w"> </span>matplotlib
+<span class="c1"># 安装tensorflow-gpu 2(默认版本)</span>
+pip<span class="w"> </span>install<span class="w"> </span>tensorflow-gpu
+<span class="c1"># 若想安装tensorflow-gpu 1.15，请勿同时安装两个版本，容易出错。</span>
+pip<span class="w"> </span>install<span class="w"> </span>tensorflow-gpu<span class="o">==</span><span class="m">1</span>.15
+</pre></div>
+</div>
+</section>
+<section id="activate-and-deactivate">
+<h3><a class="toc-backref" href="#id41">Activate and Deactivate</a><a class="headerlink" href="#activate-and-deactivate" title="Permalink to this headline">#</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">conda</span></code> command for activating and deactivating anaconda environment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w">		</span><span class="c1"># activate</span>
+conda<span class="w"> </span>deactivate<span class="w">	</span><span class="c1"># deactivate</span>
+</pre></div>
+</div>
+</section>
+<section id="uninstalling-anaconda">
+<h3><a class="toc-backref" href="#id42">Uninstalling Anaconda:</a><a class="headerlink" href="#uninstalling-anaconda" title="Permalink to this headline">#</a></h3>
+<p>Simply remove your entire Anaconda directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-rf<span class="w"> </span>~/anaconda
+</pre></div>
+</div>
+<section id="removing-anaconda-path-from-bashrc">
+<h4><a class="toc-backref" href="#id43">Removing Anaconda path from <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code></a><a class="headerlink" href="#removing-anaconda-path-from-bashrc" title="Permalink to this headline">#</a></h4>
+<p>You may wish to check the <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file in your home directory for lines such as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/home/bill/anaconda/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">/home/bill/anaconda/</span></code> with your actual path.</p>
+</div>
+</section>
+</section>
+<section id="conda-commands-for-package-management">
+<h3><a class="toc-backref" href="#id44">Conda commands for package management</a><a class="headerlink" href="#conda-commands-for-package-management" title="Permalink to this headline">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>list<span class="w">						</span><span class="c1"># List installed packages</span>
+conda<span class="w"> </span>install<span class="w"> </span>package<span class="w"> </span><span class="c1"># Install package in current environment</span>
+conda<span class="w"> </span>update<span class="w"> </span>package<span class="w">	</span><span class="c1"># Update package in current environment</span>
+conda<span class="w"> </span>remove<span class="w"> </span>package<span class="w">	</span><span class="c1"># Delete package in current environment</span>
+
+conda<span class="w"> </span>list<span class="w"> </span>-n<span class="w">  </span>your_env<span class="w">						</span><span class="c1"># List installed packages in your_env environment</span>
+conda<span class="w"> </span>install<span class="w"> </span>-n<span class="w"> </span>your_env<span class="w"> </span>package<span class="w">	</span><span class="c1"># Install package in your_env environment</span>
+conda<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span>your_env<span class="w"> </span>package<span class="w">	</span><span class="c1"># Update package in your_env environment</span>
+conda<span class="w"> </span>remove<span class="w"> </span>-n<span class="w">  </span>your_env<span class="w"> </span>package<span class="w">	</span><span class="c1"># Delete package in your_env environment</span>
+</pre></div>
+</div>
+</section>
+<section id="conda-commands-for-environment-management">
+<h3><a class="toc-backref" href="#id45">Conda commands for environment management</a><a class="headerlink" href="#conda-commands-for-environment-management" title="Permalink to this headline">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>list<span class="w">												</span><span class="c1"># List existing environments</span>
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>your_env<span class="w"> </span><span class="nv">python</span><span class="o">=</span>x.x<span class="w">		</span><span class="c1"># Create an environment with python version x.x, named as your_env</span>
+conda<span class="w"> </span>activate<span class="w"> </span>your_env<span class="w">								</span><span class="c1"># Activate your_env</span>
+conda<span class="w"> </span>deactivate<span class="w">											</span><span class="c1"># Exit your_env </span>
+conda<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>your_env<span class="w"> </span>--<span class="w"> </span>all<span class="w">				</span><span class="c1"># Delete your_env</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="access-jupyter-notebook">
+<h2><a class="toc-backref" href="#id46">Access Jupyter Notebook</a><a class="headerlink" href="#access-jupyter-notebook" title="Permalink to this headline">#</a></h2>
+<p><strong>Reference:</strong> <a class="reference external" href="https://www.cnblogs.com/cookielbsc/p/12411560.html">Slurm远程登录Jupyter Notebook</a>, <a class="reference external" href="https://zhuanlan.zhihu.com/p/65130699">分享脚本远程登陆 Jupyter Notebook</a></p>
+<p>As those on your own laptop, you can run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> on any high performance computing server. The only difference might be the lack of desktop environment so that you may have trouble accessing jupyter notebook through termianl window. Thanks to the power SSH potocol, we can run <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> in no-brower mode, and redirect the remote port to your local port. Then, we can access remote <code class="docutils literal notranslate"><span class="pre">jupter</span></code> notebooks with your local browser.</p>
+<ol>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code> on computing server.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run jupyter notebook in no-browser mode;</span>
+<span class="c1"># Specify port 8880(if occupied, try other idle ones);</span>
+jupyter<span class="w"> </span>notebook<span class="w"> </span>--no-browser<span class="w"> </span>--port<span class="o">=</span><span class="m">8880</span>
+</pre></div>
+</div>
+</li>
+<li><p>In your local laptop, open a new terminal and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># -N: Do not execute a remote command.  This is useful for just forwarding ports.</span>
+<span class="c1"># -L: Specifies that connections to the given TCP port or Unix socket</span>
+<span class="c1">#     on the local (client) host are to be forwarded to the given host</span>
+<span class="c1">#     and port, or Unix socket, on the remote side.</span>
+<span class="c1">#     First localhost:8880 is for your local port，and the second localhost:8880 </span>
+<span class="c1">#     is for the remote ones. </span>
+<span class="c1"># Replace your_name with your own username on the computing server </span>
+<span class="c1">#     with IP address=cluster_url</span>
+ssh<span class="w"> </span>-N<span class="w"> </span>-L<span class="w"> </span>localhost:8880:localhost:8880<span class="w"> </span>your_name@cluster_url
+</pre></div>
+</div>
+</li>
+<li><p>Open the browser on your own laptop, access Jupyter notebook with the url below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replace the token with the one appears in the log for jupyter command </span>
+<span class="c1">#   on your computing server</span>
+<span class="s2">&quot;http://127.0.0.1:8880/?token=260544c76ee3eeca*****************d8523886dde4656&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference external" href="https://github.com/NeoNeuron/simple-hpc-guide#slurm%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95jupyter-notebook">Remote accessing Jupyter Notebook with SLURM</a></p>
+</div>
+<!-- MATLAB Tutorial on HPC-Server -->
+</section>
+<section id="recommended-softwares">
+<h2><a class="toc-backref" href="#id47">Recommended Softwares</a><a class="headerlink" href="#recommended-softwares" title="Permalink to this headline">#</a></h2>
+<p>(on your own laptop with Unix-like operating system)</p>
+<section id="meld">
+<h3><a class="toc-backref" href="#id48">Meld</a><a class="headerlink" href="#meld" title="Permalink to this headline">#</a></h3>
+<p>Meld is a visual diff and merge tool targeted at developers. Meld helps you compare files, directories, and version controlled projects. It provides two- and three-way comparison of both files and directories, and has support for many popular version control systems.</p>
+<p>Meld helps you review code changes and understand patches. It might even help you to figure out what is going on in that merge you keep avoiding.</p>
+<p>More details : <a class="reference external" href="http://meldmerge.org">http://meldmerge.org</a></p>
+</section>
+<section id="lyx">
+<h3><a class="toc-backref" href="#id49">LyX</a><a class="headerlink" href="#lyx" title="Permalink to this headline">#</a></h3>
+<p>LyX is a document processor that encourages an approach to writing based on the structure of your documents and not simply their appearance.</p>
+<p>LyX combines the power and flexibility of TeX/LaTeX with the ease of use of a graphical interface. This results in world-class support for creation of mathematical content (via a fully integrated equation editor) and structured documents like academic articles, theses, and books. In addition, staples of scientific authoring such as reference list and index creation come standard. But you can also use LyX to create a letter or a novel or a theatre play or film script. A broad array of ready, well-designed document layouts are built in.</p>
+<p>LyX is released under a Free Software/Open Source license, runs on Linux/Unix, Windows, and Mac OS X, and is available in several languages.</p>
+<p>More details : <a class="reference external" href="https://www.lyx.org/Home">https://www.lyx.org/Home</a></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="winter_school.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">冬季班工作人员职责</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="simple-hpc-guide/hpc101.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">SJTU PI2.0-超算简明教程</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Kai Chen<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

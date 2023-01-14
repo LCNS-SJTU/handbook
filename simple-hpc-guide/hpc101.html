@@ -54,7 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="V2ray Client Setups" href="../v2ray/v2ray-client-101.html" />
+    <link rel="next" title="V2ray Client Setups" href="../v2ray/v2ray-client-101.html" />
+    <link rel="prev" title="HPC Short Manual for Researcher" href="../Linux_guide.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,7 +115,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lab routines
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../%E4%BC%9A%E8%AE%AE%E6%8A%A5%E9%94%80%E6%B5%81%E7%A8%8B.html">
    会议报销流程
@@ -125,19 +131,38 @@ const thebe_selector_output = ".output, .cell_output"
    办公用品耗材报销流程
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lab activities
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../winter_school.html">
    冬季班工作人员职责
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Lab resources
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../v2ray/v2ray-client-101.html">
-   V2ray Client Setups
+  <a class="reference internal" href="../Linux_guide.html">
+   HPC Short Manual for Researcher
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    SJTU PI2.0-超算简明教程
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../v2ray/v2ray-client-101.html">
+   V2ray Client Setups
   </a>
  </li>
 </ul>
@@ -528,8 +553,8 @@ title="Print to PDF"
 <section id="id4">
 <h3><a class="toc-backref" href="#id11">登陆方法</a><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="5bf6780c-da57-4da6-89f1-6c8310553aca" name="4a7a3e06-9b52-407c-80f1-9fed85ffe2e9" type="radio">
-</input><label class="sd-tab-label" for="5bf6780c-da57-4da6-89f1-6c8310553aca">
+<input checked="checked" id="30fc5e25-4285-4ab5-93c5-db3a3e4c14af" name="4d485522-7d8f-43d1-aacd-66b95ce53a37" type="radio">
+</input><label class="sd-tab-label" for="30fc5e25-4285-4ab5-93c5-db3a3e4c14af">
 Unix/Mac/Linux</label><div class="sd-tab-content docutils">
 <p>使用内置ssh程序，通过命令行登陆hpc服务器。以下代码示例，以用户<code class="docutils literal notranslate"><span class="pre">stu438</span></code>给出</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>stu438@pilogin.hpc.sjtu.edu.cn
@@ -537,8 +562,8 @@ Unix/Mac/Linux</label><div class="sd-tab-content docutils">
 </div>
 <p>根据命令行提示符<code class="docutils literal notranslate"><span class="pre">Password</span></code>输入密码（注意，密码输入过程中，终端信息不回更新），输入完成后<code class="docutils literal notranslate"><span class="pre">Enter</span></code>确认登陆。</p>
 </div>
-<input id="50deea25-f99b-44c8-8a16-9ca13760cdc5" name="4a7a3e06-9b52-407c-80f1-9fed85ffe2e9" type="radio">
-</input><label class="sd-tab-label" for="50deea25-f99b-44c8-8a16-9ca13760cdc5">
+<input id="f80efc16-d12f-4053-bf62-06cefb80d382" name="4d485522-7d8f-43d1-aacd-66b95ce53a37" type="radio">
+</input><label class="sd-tab-label" for="f80efc16-d12f-4053-bf62-06cefb80d382">
 Windows</label><div class="sd-tab-content docutils">
 <p>使用PuTTY进行登陆</p>
 <p><img alt="pasted" src="../_images/pasted-image.png" /></p>
@@ -628,8 +653,8 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>~/.ssh
 </ol>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="2ea614c7-b1ec-47eb-bdd4-5dc462621c8e" name="a2ee9c02-1358-4e41-b1cc-2ae3e645e326" type="radio">
-</input><label class="sd-tab-label" for="2ea614c7-b1ec-47eb-bdd4-5dc462621c8e">
+<input checked="checked" id="b046b457-78c1-40c7-9857-85d58158f7e8" name="e536ca63-4e61-4e7e-9688-bb2e91ca089b" type="radio">
+</input><label class="sd-tab-label" for="b046b457-78c1-40c7-9857-85d58158f7e8">
 Unix/Mac/Linux</label><div class="sd-tab-content docutils">
 <p>使用内置<code class="docutils literal notranslate"><span class="pre">scp</span></code>或<code class="docutils literal notranslate"><span class="pre">sftp</span></code>程序上传或下载文件。下面演示使用<code class="docutils literal notranslate"><span class="pre">scp</span></code>进行文件传输：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Upload local folder data to the remote folder ~/tmp/ on server</span>
@@ -640,8 +665,8 @@ scp<span class="w"> </span>stu438@pilogin.hpc.sjtu.edu.cn:~/data.out<span class=
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">scp</span></code>的使用方法与<code class="docutils literal notranslate"><span class="pre">cp</span></code>命令类似，其他参数设定可以参考<code class="docutils literal notranslate"><span class="pre">cp</span></code>命令。</p>
 </div>
-<input id="d8d4c45e-aa93-4b77-9442-7ed3834c080a" name="a2ee9c02-1358-4e41-b1cc-2ae3e645e326" type="radio">
-</input><label class="sd-tab-label" for="d8d4c45e-aa93-4b77-9442-7ed3834c080a">
+<input id="475bebb0-612f-4c06-b981-601197e18b6c" name="e536ca63-4e61-4e7e-9688-bb2e91ca089b" type="radio">
+</input><label class="sd-tab-label" for="475bebb0-612f-4c06-b981-601197e18b6c">
 Windows</label><div class="sd-tab-content docutils">
 <p>使用<code class="docutils literal notranslate"><span class="pre">WinSCP</span></code>进行文件传输。</p>
 <p><img alt="winscp" src="../_images/winscp.png" /></p>
@@ -939,15 +964,15 @@ sbatch:<span class="w"> </span>error:<span class="w"> </span>instead<span class=
 <li><p>文件路径问题</p>
 <p>由于Windows和Linux的文件系统不同，路径的文件分割符不同。在Windows中，文件分割符通常为<code class="docutils literal notranslate"><span class="pre">\\</span></code>，而在Linux/Mac中，文件分割符为<code class="docutils literal notranslate"><span class="pre">/</span></code>。例如，</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="e55dbcef-2a48-4317-a26b-a3ac4883cc7e" name="483e50e6-c68b-4410-99d5-c67ee09aa678" type="radio">
-</input><label class="sd-tab-label" for="e55dbcef-2a48-4317-a26b-a3ac4883cc7e">
+<input checked="checked" id="331e60c8-d228-4688-866c-68d080150a16" name="8408b1dd-af37-40fa-bcda-73f961c71683" type="radio">
+</input><label class="sd-tab-label" for="331e60c8-d228-4688-866c-68d080150a16">
 Windows</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>D:<span class="se">\\</span>Documents<span class="se">\\</span>data<span class="se">\\</span>raw_data.npy
 </pre></div>
 </div>
 </div>
-<input id="0c2281f5-f12a-4103-8081-d5cd82d6a681" name="483e50e6-c68b-4410-99d5-c67ee09aa678" type="radio">
-</input><label class="sd-tab-label" for="0c2281f5-f12a-4103-8081-d5cd82d6a681">
+<input id="8aec8c49-c80c-4f05-8e68-61a4d365344d" name="8408b1dd-af37-40fa-bcda-73f961c71683" type="radio">
+</input><label class="sd-tab-label" for="8aec8c49-c80c-4f05-8e68-61a4d365344d">
 Linux/Mac</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>/home/user/Documents/data/raw_data.npy
 </pre></div>
@@ -1046,12 +1071,19 @@ Linux/Mac</label><div class="sd-tab-content docutils">
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../v2ray/v2ray-client-101.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../Linux_guide.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">V2ray Client Setups</p>
+            <p class="prev-next-title">HPC Short Manual for Researcher</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../v2ray/v2ray-client-101.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">V2ray Client Setups</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
