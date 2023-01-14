@@ -3,9 +3,16 @@
 
 format: jb-book
 root: content
-chapters:
-- file: 会议报销流程
-- file: 日常耗材报销流程
-- file: winter_school
-- file: v2ray/v2ray-client-101
-- file: simple-hpc-guide/hpc101
+parts:
+  - caption: Lab routines
+    chapters:
+    - file: 会议报销流程
+    - file: 日常耗材报销流程
+  - caption: Lab activities
+    chapters:
+      - file: winter_school
+  - caption: Lab resources
+    chapters:
+    - file: Linux_guide
+    - file: simple-hpc-guide/hpc101
+    - file: v2ray/v2ray-client-101
