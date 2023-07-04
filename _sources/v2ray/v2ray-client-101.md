@@ -26,6 +26,8 @@
 
     Download the [latest version](https://github.com/yanue/V2rayU/releases)
 
+    *Note: For some cases, the latest version might failed. Then you may use `v3.2.0`.*
+
 ```
 ````
 
