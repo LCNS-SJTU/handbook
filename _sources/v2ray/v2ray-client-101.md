@@ -8,7 +8,7 @@
 ```{tab-item} Windows
 :sync: key1
 
-- Download [v2rayN-Core.zip](https://github.com/2dust/v2rayN/releases/tag/5.32)
+- Download [v2rayN-Core.zip](https://github.com/2dust/v2rayN/releases/latest)
 
 ```
 ```{tab-item} macOS
@@ -24,9 +24,14 @@
 
     **Install from package** 
 
-    Download the [latest version](https://github.com/yanue/V2rayU/releases)
+    Download the [latest version](https://github.com/yanue/V2rayU/releases/latest)
 
-    *Note: For some cases, the latest version might failed. Then you may use `v3.2.0`.*
+```
+```{tab-item} iOS/iPadOS
+:sync: key3
+- [Download](https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690) V2BOX app on your devices from App Store using an Apple ID registered outside of mainland China.
+
+    ![download_v2box](download_v2box.png)
 
 ```
 ````
@@ -75,6 +80,20 @@
 4. (Optional) Customize PAC rules if needed.
 
     ![pac](pac_setting.png)
+```
+```{tab-item} iOS/iPadOS
+:sync: key3
+1. Run V2BOX app on your devices, and open configure.
+
+    ![config_v2box](config_v2box.png)
+
+2. Add new server and import settings with URL copied from administrator.
+
+    ![after_config_v2box](after_config_v2box.png)   
+
+3. Turn VPN on.
+    
+    ![enable_v2box](enable_v2box.png)
 ```
 ````
 
