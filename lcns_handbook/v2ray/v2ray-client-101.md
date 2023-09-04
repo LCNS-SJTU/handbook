@@ -8,7 +8,7 @@
 ```{tab-item} Windows
 :sync: key1
 
-- Download [v2rayN-Core.zip](https://github.com/2dust/v2rayN/releases/latest)
+- Download [v2rayN-With-Core.zip](https://github.com/2dust/v2rayN/releases/latest)
 
 ```
 ```{tab-item} macOS
@@ -25,6 +25,10 @@
     **Install from package** 
 
     Download the [latest version](https://github.com/yanue/V2rayU/releases/latest)
+
+    ```{note}
+    If your v2rayU version is v3.8.0, please check this [issue](https://github.com/yanue/V2rayU/issues/1299#issue-1836601726) to manually update xray-core.
+    ```
 
 ```
 ```{tab-item} iOS/iPadOS
