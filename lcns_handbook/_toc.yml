@@ -16,3 +16,4 @@ parts:
     - file: Linux_guide
     - file: simple-hpc-guide/hpc101
     - file: v2ray/v2ray-client-101
+    - file: meeting/book-meeting
