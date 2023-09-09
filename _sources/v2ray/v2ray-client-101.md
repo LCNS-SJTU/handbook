@@ -33,9 +33,14 @@
 ```
 ```{tab-item} iOS/iPadOS
 :sync: key3
-- [Download](https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690) V2BOX app on your devices from App Store using an Apple ID registered outside of mainland China.
+- [Download](https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690) V2BOX app on your devices from App Store using an [Apple ID registered outside of mainland China](https://www.youtube.com/watch?v=BK_TT8zEuxU&t=0s).
 
-    ![download_v2box](download_v2box.png)
+    ```{figure} download_v2box.jpg
+    ---
+    scale: 25%
+    align: center
+    ---
+    ```
 
 ```
 ````
@@ -89,15 +94,59 @@
 :sync: key3
 1. Run V2BOX app on your devices, and open configure.
 
-    ![config_v2box](config_v2box.png)
+    ```{figure} config_v2box.jpg
+    ---
+    scale: 25%
+    align: center
+    ---
+    ```
 
 2. Add new server and import settings with URL copied from administrator.
 
-    ![after_config_v2box](after_config_v2box.png)   
+    ```{figure} after_config_v2box.jpg
+    ---
+    scale: 25%
+    align: center
+    ---
+    ```
 
 3. Turn VPN on.
     
-    ![enable_v2box](enable_v2box.png)
+    ```{figure} enable_v2box.jpg
+    ---
+    scale: 25%
+    align: center
+    ---
+    ```
+
+4. (Optional) Customize routing rules to selectivly proxy your data if needed.
+
+    [V2BOX routing setup URL](https://gist.githubusercontent.com/vveg26/d856567e4964cc1fb6a20ed00124fccf/raw/d18d0ac58264c09ddcb02c33dde495b952bc27d3/v2boxroute.txt)
+
+    ```{figure} setup_routing.jpg
+    ---
+    scale: 25%
+    align: left
+    ---
+    ```
+    ```{figure} import_routing_url.jpg
+    ---
+    scale: 25%
+    align: right
+    ---
+    ```
+    ```{figure} import_routing_url1.jpg
+    ---
+    scale: 25%
+    align: left
+    ---
+    ```
+    ```{figure} import_routing_url2.jpg
+    ---
+    scale: 25%
+    align: right
+    ---
+    ```
 ```
 ````
 
