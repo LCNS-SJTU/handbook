@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -76,6 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -164,13 +174,13 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lab activities</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="winter_school.html">冬季班工作人员职责</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meeting/book-meeting.html">预定腾讯会议并发送邀请</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lab resources</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Linux_guide.html">HPC Short Manual for Researcher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simple-hpc-guide/hpc101.html">SJTU PI2.0-超算简明教程</a></li>
 <li class="toctree-l1"><a class="reference internal" href="v2ray/v2ray-client-101.html">V2ray Client Setups</a></li>
-<li class="toctree-l1"><a class="reference internal" href="meeting/book-meeting.html">预定腾讯会议并发送邀请</a></li>
 </ul>
 
     </div>
@@ -326,10 +336,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -337,7 +347,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -381,7 +391,7 @@ document.write(`
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ol class="arabic simple">
-<li><p>超过1000元的设备需登记作固定资产，请上报导师申请购买。</p></li>
+<li><p>超过1000元的设备需登记作<strong>固定资产</strong>，请上报导师申请购买。</p></li>
 <li><p>200～1000元的设备需登记作低值设备，请于申请报销之前，前往理科楼5号楼309办公室领取<strong>低值单</strong>。填写后，作为相关材料，于下述操作第4步中上传。</p></li>
 </ol>
 </div>
@@ -436,6 +446,13 @@ document.write(`
 <li><p>填写报销收款人收款学号。</p>
 <p><img alt="image" src="_images/2022-11-07-11-39-34-image.jpeg" /></p>
 </li>
+<li><p>报销材料提交</p>
+<ul class="simple">
+<li><p>若系统提示本次报销为<strong>零投递业务</strong>，则无需后续操作，等待财务审核通过后，报销款就会到账。</p></li>
+<li><p>若系统提示本次业务<strong>非零投递业务</strong>，则需要等待导师和学院审核通过后，打印确认单与<strong>所有发票与其他材料</strong>（包括电子发票打印件，纸质发票原件等），前往<strong>理科楼五号楼一楼</strong>报销投递机器处扫码投递。</p></li>
+<li><p>若报销过程中，财务处发现材料缺失或其他问题无法报销，你将在<em>交我办</em>app中收到消息提醒。请届时带齐补充材料，前往<strong>行政楼B楼一楼财务计划处</strong>处理。</p></li>
+</ul>
+</li>
 <li><p>材料留档</p>
 <ol class="arabic simple">
 <li><p>待审批通过后，在<strong>智能报销-已审批</strong>内找到报销条目，保存预约报销单, 保存为<code class="docutils literal notranslate"><span class="pre">打印确认单.pdf</span></code>。</p></li>
@@ -472,11 +489,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="%E4%BC%9A%E8%AE%AE%E6%8A%A5%E9%94%80%E6%B5%81%E7%A8%8B.html"
@@ -496,10 +512,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -562,8 +575,8 @@ By Kai Chen
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
