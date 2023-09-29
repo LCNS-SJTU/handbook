@@ -10,10 +10,10 @@ parts:
     - file: 日常耗材报销流程
   - caption: Lab activities
     chapters:
-      - file: winter_school
+    - file: winter_school
+    - file: meeting/book-meeting
   - caption: Lab resources
     chapters:
     - file: Linux_guide
     - file: simple-hpc-guide/hpc101
     - file: v2ray/v2ray-client-101
-    - file: meeting/book-meeting
