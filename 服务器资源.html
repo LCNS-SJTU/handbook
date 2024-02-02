@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>目录 &#8212; LCNS Handbook</title>
+    <title>服务器资源 &#8212; LCNS Handbook</title>
   
   
   
@@ -62,10 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '服务器资源';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="会议报销流程" href="%E4%BC%9A%E8%AE%AE%E6%8A%A5%E9%94%80%E6%B5%81%E7%A8%8B.html" />
+    <link rel="next" title="HPC Short Manual for Researcher" href="Linux_guide.html" />
+    <link rel="prev" title="预定腾讯会议并发送邀请" href="meeting/book-meeting.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -141,7 +142,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="content.html">
   
   
   
@@ -161,8 +162,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="content.html">
                     目录
                 </a>
             </li>
@@ -178,8 +179,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="meeting/book-meeting.html">预定腾讯会议并发送邀请</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lab resources</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B5%84%E6%BA%90.html">服务器资源</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">服务器资源</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux_guide.html">HPC Short Manual for Researcher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simple-hpc-guide/hpc101.html">SJTU PI2.0-超算简明教程</a></li>
 <li class="toctree-l1"><a class="reference internal" href="v2ray/v2ray-client-101.html">V2ray Client Setups</a></li>
@@ -254,7 +255,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/LCNS-SJTU/handbook/issues/new?title=Issue%20on%20page%20%2Fcontent.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/LCNS-SJTU/handbook/issues/new?title=Issue%20on%20page%20%2F服务器资源.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -284,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/content.md" target="_blank"
+      <li><a href="_sources/服务器资源.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +356,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -366,11 +369,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>目录</h1>
+    <h1>服务器资源</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">已有计算资源</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>算力资源协调细则：</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>“先到先得”原则</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>“有求必应”原则</strong> （紧急任务需要临时插队）</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -381,31 +397,54 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>目录<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<p><strong>Welcome to Lab of Computational Neuroscience</strong></p>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lab routines</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="%E4%BC%9A%E8%AE%AE%E6%8A%A5%E9%94%80%E6%B5%81%E7%A8%8B.html">会议报销流程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="%E6%97%A5%E5%B8%B8%E8%80%97%E6%9D%90%E6%8A%A5%E9%94%80%E6%B5%81%E7%A8%8B.html">办公用品耗材报销流程</a></li>
+<h1>服务器资源<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<section id="id2">
+<h2>已有计算资源<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>CPU 服务器1</strong> (<code class="docutils literal notranslate"><span class="pre">IP:</span> <span class="pre">xxx.xxx.1.121</span></code>): 64核CPU + 256G内存</p></li>
+<li><p><strong>CPU 服务器2</strong> (<code class="docutils literal notranslate"><span class="pre">IP:</span> <span class="pre">xxx.xxx.47.245</span></code>): 64核CPU + 256G内存</p></li>
+<li><p><strong>V100 服务器</strong> (<code class="docutils literal notranslate"><span class="pre">IP:</span> <span class="pre">xxx.xxx.47.245</span></code>): 40核CPU + 128G内存 + 1块 V100 (cuda:0)</p></li>
+<li><p><strong>A100 服务器</strong> (<code class="docutils literal notranslate"><span class="pre">IP:</span> <span class="pre">xxx.xxx.181.119</span></code>): 128核CPU + 1T内存 + 8块 A100 (cuda:0-cuda:8)</p></li>
+</ol>
+</section>
+<section id="id3">
+<h2><strong>算力资源协调细则：</strong><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<section id="id4">
+<h3><strong>“先到先得”原则</strong><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>计算资源先到先得。</p></li>
+<li><p>如果运行大型任务满足以下<strong>任一条件</strong>，并持续24h以上，需在 <em>Zhoulab HPC 服务器</em> 微信管理群内报备，具体说明<strong>使用计算资源</strong>以及<strong>预计使用的天数</strong>。</p>
+<ul class="simple">
+<li><p>使用超过单台服务器 80% 的 CPU 核心;（使用<code class="docutils literal notranslate"><span class="pre">top</span></code> 命令查看CPU占用率）</p></li>
+<li><p>使用超过单台服务器 80% 的内存;（使用<code class="docutils literal notranslate"><span class="pre">top</span></code> 命令查看RAM使用率）</p></li>
+<li><p>使用超过 1 块 GPU，且 GPU utility 超过 80%;（使用<code class="docutils literal notranslate"><span class="pre">nvdia-smi</span></code> 命令查看GPU utility）</p></li>
+<li><p>使用超过 1 块 GPU，且显存使用率超过 80%;（使用<code class="docutils literal notranslate"><span class="pre">nvdia-smi</span></code> 命令查看GPU memory）</p></li>
 </ul>
+</li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title"><strong>报备例子</strong></p>
+<ol class="arabic simple">
+<li><p>我需要占用 <strong>A100 服务器</strong>的两张GPU (cuda:6, cuda:7), GPU utility均接近100%，预计任务时间2天。</p></li>
+<li><p>我需要占用 <strong>CPU 服务器2</strong> 的 50 个核心，预计任务时间 1 天。</p></li>
+</ol>
 </div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lab activities</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="winter_school.html">冬季班工作人员职责</a></li>
-<li class="toctree-l1"><a class="reference internal" href="meeting/book-meeting.html">预定腾讯会议并发送邀请</a></li>
+</section>
+<section id="id5">
+<h3><strong>“有求必应”原则</strong> （紧急任务需要临时插队）<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>可私聊计算资源<strong>目前使用者</strong>进行协调。被私聊者必须给出回应：</p>
+<ul class="simple">
+<li><p>暂停当前<em>不紧急、不必要</em>的任务，让出资源；</p></li>
+<li><p>给出必须继续使用的<em>充分理由</em>，如“我已经跑了一周了，还差一个小时就能完成”，并主动协商后续的使用时间；</p></li>
+<li><p>双方无法协调，可以联系管理员或老师申请额外的计算资源。</p></li>
 </ul>
-</div>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lab resources</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%B5%84%E6%BA%90.html">服务器资源</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Linux_guide.html">HPC Short Manual for Researcher</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simple-hpc-guide/hpc101.html">SJTU PI2.0-超算简明教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2ray/v2ray-client-101.html">V2ray Client Setups</a></li>
-</ul>
-</div>
+</li>
+<li><p>若目前有<strong>多位计算资源高需求使用者</strong>，可以随时在管理群里at使用者们提出需求，当前使用者们看到后必须主动回应。</p></li>
+<li><p>若<strong>长时间反馈无果</strong>，可以联系集群管理员，直接关闭任务。</p></li>
+</ol>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -438,12 +477,21 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="meeting/book-meeting.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">预定腾讯会议并发送邀请</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="%E4%BC%9A%E8%AE%AE%E6%8A%A5%E9%94%80%E6%B5%81%E7%A8%8B.html"
+       href="Linux_guide.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">会议报销流程</p>
+        <p class="prev-next-title">HPC Short Manual for Researcher</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -453,6 +501,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">已有计算资源</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>算力资源协调细则：</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>“先到先得”原则</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>“有求必应”原则</strong> （紧急任务需要临时插队）</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
