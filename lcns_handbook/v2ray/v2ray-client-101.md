@@ -30,6 +30,10 @@
     If your v2rayU version is v3.8.0, please check this [issue](https://github.com/yanue/V2rayU/issues/1299#issue-1836601726) to manually update xray-core.
     ```
 
+    ```{note}
+    If there is a issue related to "'V2rayUTool' will cause damages to your computer...", please check this [issue](https://github.com/yanue/V2rayU/issues/1431) to fix it.
+    ```
+
 ```
 ```{tab-item} iOS/iPadOS
 :sync: key3
