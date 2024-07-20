@@ -403,6 +403,7 @@ document.write(`
 <ol class="arabic simple">
 <li><p><strong>CPU 服务器1</strong> (<code class="docutils literal notranslate"><span class="pre">IP:</span> <span class="pre">xxx.xxx.1.121</span></code>): 64核CPU + 256G内存</p></li>
 <li><p><strong>CPU 服务器2</strong> (<code class="docutils literal notranslate"><span class="pre">IP:</span> <span class="pre">xxx.xxx.47.245</span></code>): 64核CPU + 256G内存</p></li>
+<li><p><strong>CPU 服务器3</strong> (<code class="docutils literal notranslate"><span class="pre">IP:</span> <span class="pre">xxx.xxx.47.245</span></code>): 256核CPU + 1.5T内存</p></li>
 <li><p><strong>V100 服务器</strong> (<code class="docutils literal notranslate"><span class="pre">IP:</span> <span class="pre">xxx.xxx.47.245</span></code>): 40核CPU + 128G内存 + 1块 V100 (cuda:0)</p></li>
 <li><p><strong>A100 服务器</strong> (<code class="docutils literal notranslate"><span class="pre">IP:</span> <span class="pre">xxx.xxx.181.119</span></code>): 128核CPU + 1T内存 + 8块 A100 (cuda:0-cuda:8)</p></li>
 </ol>
@@ -415,20 +416,13 @@ document.write(`
 <li><p>计算资源先到先得。</p></li>
 <li><p>如果运行大型任务满足以下<strong>任一条件</strong>，并持续24h以上，需在 <em>Zhoulab HPC 服务器</em> 微信管理群内报备，具体说明<strong>使用计算资源</strong>以及<strong>预计使用的天数</strong>。</p>
 <ul class="simple">
-<li><p>使用超过单台服务器 80% 的 CPU 核心;（使用<code class="docutils literal notranslate"><span class="pre">top</span></code> 命令查看CPU占用率）</p></li>
-<li><p>使用超过单台服务器 80% 的内存;（使用<code class="docutils literal notranslate"><span class="pre">top</span></code> 命令查看RAM使用率）</p></li>
-<li><p>使用超过 1 块 GPU，且 GPU utility 超过 80%;（使用<code class="docutils literal notranslate"><span class="pre">nvdia-smi</span></code> 命令查看GPU utility）</p></li>
-<li><p>使用超过 1 块 GPU，且显存使用率超过 80%;（使用<code class="docutils literal notranslate"><span class="pre">nvdia-smi</span></code> 命令查看GPU memory）</p></li>
+<li><p>使用超过单台服务器 80% 的 CPU 核心;（使用 <code class="docutils literal notranslate"><span class="pre">top</span></code> 命令查看CPU占用率）</p></li>
+<li><p>使用超过单台服务器 80% 的内存;（使用 <code class="docutils literal notranslate"><span class="pre">top</span></code> 命令查看RAM使用率）</p></li>
+<li><p>使用超过 1 块 GPU，且 GPU utility 超过 80%;（使用 <code class="docutils literal notranslate"><span class="pre">nvdia-smi</span></code> 命令查看GPU utility）</p></li>
+<li><p>使用超过 1 块 GPU，且显存使用率超过 80%;（使用 <code class="docutils literal notranslate"><span class="pre">nvdia-smi</span></code> 命令查看GPU memory）</p></li>
 </ul>
 </li>
 </ol>
-<div class="note admonition">
-<p class="admonition-title"><strong>报备例子</strong></p>
-<ol class="arabic simple">
-<li><p>我需要占用 <strong>A100 服务器</strong>的两张GPU (cuda:6, cuda:7), GPU utility均接近100%，预计任务时间2天。</p></li>
-<li><p>我需要占用 <strong>CPU 服务器2</strong> 的 50 个核心，预计任务时间 1 天。</p></li>
-</ol>
-</div>
 </section>
 <section id="id5">
 <h3><strong>“有求必应”原则</strong> （紧急任务需要临时插队）<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
